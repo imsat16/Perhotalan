@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import NavbarComp from "../component/NavbarComp";
 
 export const LoginPage = () => {
   return (
@@ -29,7 +28,7 @@ export const LoginPage = () => {
                   type="password"
                   placeholder="Password"
                 />
-                <Link to="/reservations">
+                <Link to="/rm">
                   <button className="mb-3 px-8 w-full py-1 text-md text-gray-800 font-semibold rounded-md border bg-gray-100 border-gray-200 hover:text-white hover:bg-gray-800 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">
                     Login
                   </button>

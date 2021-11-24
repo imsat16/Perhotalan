@@ -5,9 +5,9 @@ const NavbarComp = () => {
   return (
     <div className="bg-blue-300">
       <div className="flex flex-col lg:flex-row">
-        <div className="flex justify-between items-center px-4 py-4 lg:py-0 border-b lg:border-b">
+        <div className="flex justify-between items-center px-4 py-4 lg:py-0 border-b lg:border-0">
           <div>
-            <a href="a" className="uppercase font-semibold text-white">
+            <a href className="uppercase font-semibold text-white">
               Brand
             </a>
           </div>
@@ -45,23 +45,23 @@ const NavbarComp = () => {
         <div
           className={`${
             isOpen ? "block" : "hidden"
-          } lg:flex flex-col lg:flex-row justify-between w-full py-4 lg:py-0`}
+          } lg:flex flex-col lg:flex-row justify-between w-full py-3 lg:py-0 `}
         >
-          <div className="flex flex-col lg:flex-row">
+          <div className="flex flex-col lg:flex-row items-center">
             <a
               href="rm"
-              className="block px-4 py-3 lg:py-5 text-white hover:font-medium"
+              className="block px-4 py-3 lg:py-5 text-white hover:border-b-3"
             >
               Reservations Management
             </a>
             <a
               href="hm"
-              className="block px-4 py-3 lg:py-5 text-white hover:font-medium"
+              className="block px-4 py-3 lg:py-5 text-white hover:border-b-3"
             >
               Hotel Management
             </a>
           </div>
-          <div className="flex flex-col lg:flex-row">
+          <div className="flex flex-col lg:flex-row items-center">
             <a
               href="profile"
               className="block px-4 py-3 lg:py-5 text-white hover:font-medium"
