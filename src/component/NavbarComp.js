@@ -24,14 +24,14 @@ const NavbarComp = () => {
                 stroke="currentColor"
               >
                 <path
-                className={!isOpen ? 'block' : 'hidden'}
+                  className={!isOpen ? "block" : "hidden"}
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
                   d="M4 6h16M4 12h16M4 18h16"
                 />
                 <path
-                className={isOpen ? 'block' : 'hidden'}
+                  className={isOpen ? "block" : "hidden"}
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
@@ -62,6 +62,29 @@ const NavbarComp = () => {
             </a>
           </div>
           <div className="flex flex-col lg:flex-row items-center">
+            <div className="hidden lg:block shadow-md text-white hover:text-gray-400 border-2 hover:bg-white p-1 rounded-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
+                />
+              </svg>
+            </div>
+              
+            <a
+              href
+              className="block lg:hidden px-4 py-3 lg:py-5 text-white hover:font-medium"
+            >
+              Bahasa
+            </a>
             <a
               href="profile"
               className="block px-4 py-3 lg:py-5 text-white hover:font-medium"
