@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { multiStepContext } from "../StepContext";
 
 function AddRMForm() {
+  const{setStep, userData, setUserData} = useContext(multiStepContext);
   return (
     <div>
       <div className="flex-row">
-        <div className="flex">
+        <div className="lg:flex">
           <div>
             <h4 className="font-bold my-2">Common Information</h4>
             <div className="px-2 pl-0">
@@ -57,7 +59,7 @@ function AddRMForm() {
             </div>
           </div>
 
-          <div className="px-3">
+          <div className="lg:px-3">
             <h4 className="font-bold my-2">Room Information</h4>
             <div className="px-2 pl-0">
               <h5>CheckIn</h5>{" "}
@@ -109,52 +111,10 @@ function AddRMForm() {
             </div>
           </div>
 
-          <div className="">
-            <h4 className="font-bold my-2">Guest Information</h4>
-            <div className="px-2 pl-0">
-              <h5>Guest Name</h5>{" "}
-              <input
-                type="text"
-                class="rounded-lg p-2 bg-gray-200 focus:shadow focus:outline-none"
-                placeholder="Search anything..."
-              />
-            </div>
-            <div className="px-2 pl-0">
-              <h5>Company</h5>{" "}
-              <input
-                type="text"
-                class="rounded-lg p-2 bg-gray-200 focus:shadow focus:outline-none"
-                placeholder="Search anything..."
-              />
-            </div>
-            <div className="px-2 pl-0">
-              <h5>Email</h5>{" "}
-              <input
-                type="text"
-                class="rounded-lg p-2 bg-gray-200 focus:shadow focus:outline-none"
-                placeholder="Search anything..."
-              />
-            </div>
-            <div className="px-2 pl-0">
-              <h5>Phone</h5>{" "}
-              <input
-                type="text"
-                class="rounded-lg p-2 bg-gray-200 focus:shadow focus:outline-none"
-                placeholder="Search anything..."
-              />
-            </div>
-            <div className="px-2 pl-0">
-              <h5>Sepecial Requirement</h5>{" "}
-              <textarea
-                class="rounded-lg w-full p-2 bg-gray-200 focus:shadow focus:outline-none"
-                placeholder="Search anything..."
-              />
-            </div>
-          </div>
         </div>
         <div className="pr-2">
-        <div className="float-right flex items-center rounded-lg bg-gray-500 p-1 text-white ">
-          <button className="uppercase flex font-semibold">
+        <div className="float-right flex items-center rounded-lg mt-2 text-gray-600 ">
+          <button className="uppercase pl-2 flex font-semibold" onClick={()=>setStep(2)}>
             Next{" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"

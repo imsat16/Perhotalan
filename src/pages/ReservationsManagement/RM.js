@@ -1,9 +1,10 @@
 import React from "react";
-import AddRMReservations from "../../component/AddRMReservations";
+import AddRMReservations from "../../component/RM/AddRMReservations";
 import NavbarComp from "../../component/NavbarComp";
-import RMDropdown from "../../component/RMDropdown";
+import RMDropdown from "../../component/RM/RMDropdown";
 import SearchRMReservations from "../../component/SearchRMReservations";
 import TableRMReservations from "../../component/TableRMReservations";
+import StepContext from "../../component/RM/StepContext";
 
 function RM() {
   return (
@@ -15,7 +16,9 @@ function RM() {
         <RMDropdown />
         <div className="flex">
           <SearchRMReservations />
+      <StepContext>
           <AddRMReservations />
+    </StepContext>
         </div>
       </div>
       <TableRMReservations/>
